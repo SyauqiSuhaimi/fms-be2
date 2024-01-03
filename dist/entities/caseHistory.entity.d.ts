@@ -1,0 +1,31 @@
+import { User } from "../auth/user.entity";
+import { Case } from "./case.entity";
+import { Inventory } from "./inventory.entity";
+import { Notifications } from "./notification.entity";
+import { Case_Status } from "./case_status.entity";
+import { Inventory_Usage } from "./inventory_usage.entity";
+export declare class CaseHistory {
+    id: number;
+    datetime: number;
+    tech_datetime: number;
+    user_datetime: number;
+    description: String;
+    status: string;
+    image_file: string;
+    technician_sign: string;
+    user_sign: string;
+    user_name: string;
+    material_cost: number;
+    labour_cost: number;
+    vendor_cost: number;
+    cases: Case;
+    updater: User;
+    user: User;
+    inventory: Inventory;
+    notifications: Notifications[];
+    old_status: Case_Status;
+    new_status: Case_Status;
+    inventoryusage: Inventory_Usage[];
+    effect_labour_cost: boolean;
+    datetime2: number;
+}
